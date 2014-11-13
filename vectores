@@ -1,0 +1,43 @@
+// vectoresç.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+#define tam 100
+
+using namespace std;
+
+void leer_vector (float vec[], int n);
+void mostrar_vector (float vec[], int n);
+
+void main()
+{float n,i,vector[tam];
+cout<<"ingrese el tamaño del vector";
+cin>>n;
+
+leer_vector(vector,n);
+mostrar_vector(vector,n);
+getch ();
+}
+
+void leer_vector (float vec[], int n)
+{
+	for(int i=0;i<n;i++)
+	{cout<<"["<<i<<"]:";
+	cin>>vec[i];
+}
+void mostrar_vector (float vec[], int n)
+{
+	for(int i=0;i<n;i++)
+   {	
+	vec[i]=vec[i] + vec[i]*0.1;
+
+	cout<<"["<<i<<"]:";
+	cout<<vec[i]<<endl;
+	}
+
+}
+	
+
